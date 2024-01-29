@@ -1,0 +1,262 @@
+   
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:wght@100;300;400;500;700&display=swap');
+    
+    @font-face {
+        font-family: "steelfish";
+        src: url(Font/steelfish/steelfish\ rg.otf);
+    }
+    
+    *{
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   :root{
+    --var-primary-color: #00614F;
+    --var-pad-in: 90px;
+   }
+
+   /* ////////////////////////// NAV BAR /////////////////////////////// */
+
+   nav,
+   nav span,
+   .menu,
+   nav ul,
+   .store{
+        display: flex;
+        align-items: center;
+        font-family: "Quicksand";
+        font-weight: 700;
+        font-size: .8rem;
+   }
+
+   nav a{
+        text-decoration: none;
+        color: black;
+   }
+    
+   nav{
+        padding-inline: var(--var-pad-in);
+        padding-block: 12px;
+   }
+
+   nav span{
+        gap: 3vw;
+        color: var(--var-primary-color);
+   }
+
+   .menu{
+     gap: 1vw;
+     cursor: pointer;
+   }
+
+   nav ul{
+    margin: auto;
+    gap: 2vw;
+   }
+
+   .store{
+    gap: 10px;
+   }
+   .fa-store {
+     font-size: 1.1rem;
+   }
+
+   /* ///////////////////////// MAIN ////////////////////////// */
+
+   main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: var(--var-pad-in);
+}
+
+   figure{
+     color: var(--var-primary-color);
+     /* font-size: clamp(2rem, 19.6vw, 23rem); */
+     font-size: 16.5rem;
+     font-family: "steelfish";
+     letter-spacing: -3px;
+     font-weight: 100;
+     line-height: .9;
+     width: 70%;
+     min-width: 680px;
+     position: relative;
+   }
+
+   .price-tag {
+     position: absolute;
+     right: 51%;
+     top: 40%;
+   }
+
+   .product{
+     position: absolute;
+     bottom: 0%;
+     left: 38%;
+     transform: translateY(15px);
+   }
+
+  /*/////////////////////////////////FigCaption /////////////////////////////////////*/
+
+  .info {
+     font-family: 'Roboto', 'calibri';
+     text-transform: uppercase;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     flex-grow: 1;
+     padding-top: 80px;
+  }
+  .info p {
+     font-size: .9rem;
+     font-weight: 500;
+  }
+  .info button {
+     background-color: var(--var-primary-color);
+     color: white;
+     font-weight: 500;
+     text-transform: uppercase;
+     border: none;
+     width: 150px;
+     padding: 10px 10px;
+     border-radius: 1rem;
+     margin-top: 20px;
+     cursor: pointer;
+  }
+  .info span {
+     margin-top: auto;
+     align-self: end;
+     font-weight: 600;
+     cursor: pointer;
+     text-transform: capitalize;
+  }
+
+  /* ///////////////////////////////// FOOTER /////////////////////////////// */
+
+   footer {
+     text-align: center;
+     padding-inline: var(--var-pad-in);
+     padding-top: 20px;
+   }
+   .container {
+     padding-block: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+     border: 1px solid rgba(0, 0, 0, 0.5);
+     border-radius: 1rem;
+   }
+   .container span {
+     text-transform: uppercase;
+     font-family: "Quicksand";
+     border-right: 1px solid rgba(0, 0, 0, 0.5);
+     flex-grow: 1;
+   }
+   .container span p {
+     color: #00614F;
+     font-size: .7rem;
+     font-weight: 600;
+   }
+   .container span a {
+     text-decoration: none;
+     font-size: .8rem;
+     color: black;
+     font-weight: 800;
+   }
+
+   #deepanshu {
+     color: purple ;
+  }
+  .fa-github {
+     font-size: 1.3rem;
+  }
+
+   /* ////////////////////////////////// RESPONSIVE FOR EVERY PIXEL CHECK /////////////////////////////////// */
+
+   @media (max-width:1117px) {
+     nav {
+          padding-block: 25px;
+     }
+
+     figcaption{
+          width: 100%;
+     }
+     .info {
+          padding-top: 40px;
+     }
+     .info p br {
+          display: none;
+     }
+     .info span {
+          padding-block: 20px;
+     }
+   }
+
+   @media (max-width:775px) {
+     :root{
+          --var-pad-in: 20px;
+     }
+     nav ul {
+          display: none;
+     }
+     .store{
+          margin-left: auto;
+     }
+   }
+
+   @media (max-width:707px) {
+     figure{
+          min-width: 0;
+          width: fit-content;
+          font-size: clamp(2rem, 36vw, 40rem);
+     }
+     .price-tag {
+          right: 0;
+          left: 25%;
+     }    
+     .product{
+          left: 50%;
+          width: 60vw;
+     }
+     .info p {
+          word-spacing: 1px;
+          letter-spacing: .5px;
+          line-height: 1.6;
+     }
+   }
+
+   @media (max-width:530px) {
+     footer {
+          padding: 0%;
+          
+     }
+     .container {
+          flex-direction: column;
+          text-align: start;
+          border: none;
+          border-radius: 0;
+          padding-inline: 20px;
+     }
+     .container span {
+          border-right: none;
+          border-bottom: 2px solid var(--var-primary-color);
+          padding-block: 10px;
+          flex-grow: 0;
+          width: 100%;
+     }
+     .container span p{
+          font-size: 1rem;
+     }
+     .container span a {
+          font-size: 1rem;
+     }
+     .price-tag{
+          width: 50px;
+     }
+     .product {
+          left: 30%;
+     }
+   }
